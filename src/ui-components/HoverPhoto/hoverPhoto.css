@@ -1,0 +1,53 @@
+.hoverPhotoContainer {
+    margin: 10px 20px;
+    position: relative;
+    display: flex;
+    background-size: contain !important;
+    border-radius: 5%;
+}
+
+.hoverPhotoContainer:hover {
+    box-shadow: 0px 1px 49px -52px rgba(0,0,0,0.72);
+    -webkit-box-shadow: 0px 1px 49px -52px rgba(0,0,0,0.72);
+    -moz-box-shadow: 0px 1px 49px -52px rgba(0,0,0,0.72);
+}
+
+.hoverPhotoContainer:hover:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 40%;
+    transition: all .75s ease;
+    background: linear-gradient(180deg, rgba(0,0,0,0), black);
+    border-radius: 7%;
+}
+
+.hoverPhotoContainer img {
+    border-radius: 5%;
+}
+
+.hpTitle {
+    position: absolute;
+    margin: 0 auto;
+    left: 1em;
+    right: 0;
+    bottom: 3em;
+    text-align: left;
+    color: white;
+    font-size: 14px;
+    -webkit-transition: font-size 1s;
+    -moz-transition: font-size 1s;
+    -o-transition: font-size 1s;
+    transition: font-size 1s;
+    /*z-index: 100;*/
+}
+.hpTitle.magnify {
+    font-size: 20px;
+    -webkit-transition: font-size 0.5s;
+    -moz-transition: font-size 0.5s;
+    -o-transition: font-size 0.5s;
+    transition: font-size 0.5s;
+
+}

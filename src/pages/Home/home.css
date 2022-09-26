@@ -1,0 +1,33 @@
+.homeWrapper {
+    font-family: Arial;
+}
+
+.carouselWrapper {
+    max-height: 100vh;
+    display: flex;
+}
+
+.homeContentWrapper {
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 0 15em;
+}
+
+.hoverWrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+@media (max-width: 480px) {
+    .hoverWrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .homeContentWrapper {
+        padding: 0;
+    }
+}

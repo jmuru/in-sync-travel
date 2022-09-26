@@ -1,0 +1,50 @@
+.button-container {
+    padding-top: 1em;
+    padding-right: 3em;
+}
+
+.slide-container {
+    display: block;
+    position: fixed;
+    background: #21353e;
+    height: 100%;
+    width: 0;
+    right: 0;
+    transition: all .75s ease;
+}
+
+slide-container.closed {
+    display: block;
+    position: fixed;
+    background: #21353e;
+    height: 100%;
+    width: 0%;
+    right: 0;
+    transition: all .75s ease;
+}
+
+.slide-container.active {
+    display: block;
+    position: fixed;
+    background: #21353e;
+    height: 100%;
+    width: 70%;
+    right: 0;
+    transition: all .75s ease;
+    box-shadow: 40px 0px 200px 5px;
+}
+
+.slide-container.closed button {
+    display: none;
+}
+
+
+@media (max-width: 480px) {
+    .button-container {
+        padding-top: 0.5em;
+        padding-right: 1em;
+    }
+    .slide-container.active {
+        width: 70%;
+    }
+}

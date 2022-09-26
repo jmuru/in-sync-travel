@@ -1,0 +1,48 @@
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    z-index: 100;
+    position: fixed;
+    width: 100%;
+    font-family: Arial;
+    transition: all .35s ease;
+}
+
+.transform {
+    background-color: lightgray;
+    transition: all .75s ease;
+}
+
+.flex-container > * {
+    flex: 1 1 0;
+}
+
+.header-logo {
+    width: 70px;
+    height: 52px;
+}
+
+.header-menu-items ul {
+    list-style: none;
+}
+.header-menu-items ul li {
+    display: inline-block;
+    width: 33%;
+    text-align: right;
+}
+
+.header-menu-items ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+.menu-btn-container {
+    text-align: right;
+}
+
+@media (max-width: 480px) {
+    .header-menu-items {
+        display: none;
+    }
+}

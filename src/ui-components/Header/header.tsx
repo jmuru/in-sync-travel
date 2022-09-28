@@ -33,9 +33,9 @@ const HeaderComponent: React.FC<HeaderProps> = props => {
         (e: any) => {
             const window = e.currentTarget;
             if (y > window.scrollY) {
-                console.log("scrolling up");
+                // console.log("scrolling up");
             } else if (y < window.scrollY) {
-                console.log("scrolling down");
+                // console.log("scrolling down");
             }
             setY(window.scrollY);
         }, [y]

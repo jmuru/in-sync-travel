@@ -37,4 +37,25 @@ function amountscrolled(): boolean {
     return false;
 }
 
-export {getCoordinate, amountscrolled}
+function stopPageScroll(): void {
+    document.body.style.overflowY = 'hidden';
+    document.body.style.top = `-${window.scrollY}px`;
+}
+
+/*
+picks up page scroll from last stopped location
+*/
+function resumePageScroll(): void {
+    const scrollY = document.body.style.top;
+    document.body.style.position = '';
+    document.body.style.top = ``;
+    document.body.style.overflowY = 'auto';
+    window.scrollBy(0, parseInt(scrollY || '0') * -1);
+}
+
+export {
+    getCoordinate,
+    amountscrolled,
+    stopPageScroll,
+    resumePageScroll
+}

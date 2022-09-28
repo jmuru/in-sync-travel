@@ -1,8 +1,14 @@
 import React, {useState} from "react"
+import {stopPageScroll, resumePageScroll} from "../../util/coordinate";
 import "./popoutBtn.css"
 
 const PopoutBtn = () => {
     const [popoutActive, toggleActive] = useState(false)
+    if (popoutActive) {
+        stopPageScroll();
+    } else {
+        resumePageScroll();
+    }
     return (
         <div>
             <div className="popoutContainer">
